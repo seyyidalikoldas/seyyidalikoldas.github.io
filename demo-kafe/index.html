@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <title>PERA ROASTERY & BAKERY — Dijital Menü & Mağaza</title>
+  <meta name="description" content="Nitelikli kahve, ekşi mayalı fırın ürünleri ve günlük tatlılar. Canlı dijital QR menü örneği — Seyyid Ali Koldaş (salikoldas.me).">
+  <meta name="theme-color" content="#F5F1E8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%231C1917'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23F5F1E8' stroke-width='2'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #F5F1E8;
+      --paper: #FBF9F4;
+      --paper-2: #EDE7DA;
+      --ink: #1C1917;
+      --ink-soft: #57524E;
+      --ink-muted: #8A8279;
+      --line: #DFD8C8;
+      --accent: #9E472A;
+      --accent-soft: rgba(158, 71, 42, 0.1);
+      --sage: #3F5E4D;
+      --sage-soft: rgba(63, 94, 77, 0.12);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: "JetBrains Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      padding-bottom: 100px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Demo Top Bar (For Business Owners) */
+    .demo-banner {
+      background: #1C1917;
+      color: #F5F1E8;
+      padding: 9px 16px;
+      font-size: 0.76rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #332E2A;
+    }
+
+    .demo-banner-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .demo-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #E07A5F;
+      flex-shrink: 0;
+    }
+
+    .demo-banner a {
+      color: #F2CC8F;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      white-space: nowrap;
+      border: 1px solid rgba(242, 204, 143, 0.35);
+      padding: 3px 9px;
+      border-radius: 4px;
+      transition: background 0.15s;
+    }
+
+    .demo-banner a:hover {
+      background: rgba(242, 204, 143, 0.15);
+    }
+
+    /* Main Container */
+    .shell {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Editorial Cafe Header */
+    .cafe-header {
+      padding: 36px 0 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .roastery-kicker {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .cafe-title {
+      font-family: var(--serif);
+      font-size: clamp(2.3rem, 6vw, 3.6rem);
+      font-weight: 700;
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .cafe-subtitle {
+      margin-top: 10px;
+      color: var(--ink-soft);
+      font-size: 0.94rem;
+      max-width: 480px;
+    }
+
+    .open-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      border-radius: 99px;
+      color: var(--ink-soft);
+    }
+
+    .open-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    /* Quick Utility Chips (Wi-Fi, Hours, Location, View Mode) */
+    .utility-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 18px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .util-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .util-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      cursor: pointer;
+      font-family: inherit;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .util-pill:hover {
+      border-color: var(--ink-muted);
+      background: #fff;
+    }
+
+    .util-pill strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .view-toggle {
+      display: inline-flex;
+      background: var(--paper-2);
+      padding: 3px;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+    }
+
+    .view-btn {
+      border: none;
+      background: transparent;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      font-family: var(--mono);
+      color: var(--ink-soft);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .view-btn.active {
+      background: var(--paper);
+      color: var(--ink);
+      font-weight: 500;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+    }
+
+    /* Featured Roaster's Pick Banner */
+    .roaster-banner {
+      margin: 24px 0;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+    }
+
+    .rb-copy {
+      padding: 24px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .rb-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 3px 8px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .rb-title {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .rb-desc {
+      font-size: 0.86rem;
+      color: var(--ink-soft);
+    }
+
+    .rb-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+
+    .rb-visual {
+      min-height: 190px;
+      background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Sticky Category & Search Bar */
+    .menu-controls {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(245, 241, 232, 0.94);
+      backdrop-filter: blur(10px);
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+
+    .controls-inner {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .cat-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 2px;
+    }
+
+    .cat-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-btn {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink-soft);
+      padding: 8px 14px;
+      border-radius: 99px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      font-family: inherit;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .cat-btn:hover {
+      border-color: var(--ink-muted);
+      color: var(--ink);
+    }
+
+    .cat-btn.active {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 210px;
+      flex: 1;
+      max-width: 260px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 8px 14px 8px 32px;
+      font-size: 0.82rem;
+      font-family: inherit;
+      color: var(--ink);
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      color: var(--ink-muted);
+      pointer-events: none;
+    }
+
+    /* Category Section Titles */
+    .menu-section {
+      margin-bottom: 40px;
+    }
+
+    .sec-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1.5px solid var(--ink);
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+
+    .sec-head h2 {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .sec-head span {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+    }
+
+    /* Menu Grid (Photo View vs Compact List View) */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .menu-item {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: 1fr 96px;
+      gap: 14px;
+      align-items: space-between;
+      transition: border-color 0.18s, transform 0.18s;
+    }
+
+    .menu-item:hover {
+      border-color: #C5BBA8;
+      transform: translateY(-1px);
+    }
+
+    /* Compact View Override */
+    body.compact-mode .menu-item {
+      grid-template-columns: 1fr;
+      padding: 14px 16px;
+    }
+
+    body.compact-mode .item-thumb {
+      display: none;
+    }
+
+    .item-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .item-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .item-name {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--ink);
+    }
+
+    .item-badges {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      font-family: var(--mono);
+      font-size: 0.64rem;
+      padding: 1px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-sig {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .badge-veg {
+      background: var(--sage-soft);
+      color: var(--sage);
+    }
+
+    .item-desc {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .item-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .item-price {
+      font-family: var(--mono);
+      font-weight: 500;
+      font-size: 0.94rem;
+      color: var(--ink);
+    }
+
+    .item-vol {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--ink-muted);
+      margin-left: 6px;
+    }
+
+    .add-btn {
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--ink);
+      width: 30px;
+      height: 30px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+
+    .add-btn:hover {
+      background: var(--ink);
+      color: var(--bg);
+      border-color: var(--ink);
+    }
+
+    .item-thumb {
+      width: 96px;
+      height: 96px;
+      border-radius: 8px;
+      object-fit: cover;
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+    }
+
+    /* Allergen & Info Footer */
+    .cafe-footer {
+      margin-top: 48px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    .cafe-footer strong {
+      color: var(--ink);
+    }
+
+    /* Floating Table Note / Order Summary Drawer */
+    .tray-bar {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%) translateY(140%);
+      width: calc(100% - 32px);
+      max-width: 520px;
+      background: #1C1917;
+      color: #F5F1E8;
+      border-radius: 12px;
+      padding: 14px 18px;
+      box-shadow: 0 20px 40px rgba(28, 25, 23, 0.35);
+      z-index: 50;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tray-bar.visible {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .tray-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tray-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tray-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: #A8A29E;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .tray-total {
+      font-family: var(--mono);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #F2CC8F;
+    }
+
+    .tray-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .tray-btn {
+      background: #F5F1E8;
+      color: #1C1917;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .tray-clear {
+      background: transparent;
+      color: #A8A29E;
+      border: 1px solid #3F3A36;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 0.76rem;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .tray-list {
+      display: none;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid #332E2A;
+      font-size: 0.84rem;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .tray-bar.expanded .tray-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .tray-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #E7E5E4;
+    }
+
+    @media (max-width: 720px) {
+      .roaster-banner {
+        grid-template-columns: 1fr;
+      }
+      .rb-visual {
+        min-height: 150px;
+        order: -1;
+      }
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+      .search-box {
+        max-width: 100%;
+        width: 100%;
+      }
+      .demo-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Business Owner Info Banner -->
+  <div class="demo-banner">
+    <div class="demo-banner-left">
+      <span class="demo-dot" aria-hidden="true"></span>
+      <span><strong>CANLI ÖRNEK:</strong> İşletmeler için komisyonsuz, hızlı QR Menü &amp; Web Sitesi demosu — <strong>Seyyid Ali Koldaş</strong></span>
+    </div>
+    <a href="../#iletisim">İşletmeniz İçin Teklif Alın ↗</a>
+  </div>
+
+  <div class="shell">
+    <!-- Cafe Header -->
+    <header class="cafe-header">
+      <div class="header-top">
+        <div>
+          <span class="roastery-kicker">NİTELİKLİ KAHVE KAVURMAEVİ &amp; EKŞİ MAYA FIRIN · MODA, İSTANBUL</span>
+          <h1 class="cafe-title">Pera Roastery &amp; Bakery</h1>
+          <p class="cafe-subtitle">
+            Mikro-lot çekirdeklerden günlük kavrulan filtre ve espresso seçkisi, 36 saat soğuk fermantasyon kruvasanlar ve mevsimsel mutfak.
+          </p>
+        </div>
+        <div class="open-badge">
+          <span class="dot" aria-hidden="true"></span>
+          <span>AÇIK · 08:00 – 23:00</span>
+        </div>
+      </div>
+
+      <div class="utility-bar">
+        <div class="util-group">
+          <button type="button" class="util-pill" id="wifi-btn" data-pass="roastery1923">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+            </svg>
+            <span id="wifi-text">Wi-Fi Şifresini Kopyala: <strong>roastery1923</strong></span>
+          </button>
+          <span class="util-pill">
+            <span>Yulaf &amp; Badem Sütü Seçeneği Mevcuttur</span>
+          </span>
+        </div>
+
+        <div class="view-toggle" role="group" aria-label="Görünüm modu">
+          <button type="button" class="view-btn active" id="btn-photo-view">Fotoğraflı</button>
+          <button type="button" class="view-btn" id="btn-compact-view">Klasik Liste</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Seasonal Roaster Pick -->
+    <section class="roaster-banner" aria-label="Haftanın Çekirdeği">
+      <div class="rb-copy">
+        <div>
+          <span class="rb-tag">BARİSTANIN SEÇİMİ · V60 / CHEMEX</span>
+          <h2 class="rb-title">Etiyopya Guji Uraga — Yıkanmış</h2>
+          <p class="rb-desc">
+            Beyaz şeftali, bergamot çiçeği ve sütlü çikolata notalarıyla parlak, temiz bitişli tek kökenli (single-origin) demleme.
+          </p>
+        </div>
+        <div class="rb-meta">
+          <span>RAKIM: 2.150M</span>
+          <span>HASAT: 2026</span>
+          <span>SKOR: 88.25</span>
+          <span>165 ₺</span>
+        </div>
+      </div>
+      <div class="rb-visual" role="img" aria-label="Nitelikli kahve demleme"></div>
+    </section>
+
+    <!-- Sticky Category & Search Controls -->
+    <div class="menu-controls">
+      <div class="controls-inner">
+        <div class="cat-tabs" id="cat-tabs">
+          <button type="button" class="cat-btn active" data-cat="all">Tümü</button>
+          <button type="button" class="cat-btn" data-cat="espresso">Espresso Bar</button>
+          <button type="button" class="cat-btn" data-cat="soguk">Soğuk Kahveler</button>
+          <button type="button" class="cat-btn" data-cat="firin">Fırın &amp; Tatlı</button>
+          <button type="button" class="cat-btn" data-cat="mutfak">Kahvaltı &amp; Kase</button>
+        </div>
+
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <input type="search" id="menu-search" placeholder="Menüde ara (Örn. Cortado, Kruvasan)...">
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Sections -->
+    <main id="menu-container">
+
+      <!-- Category 1: Espresso Bar -->
+      <section class="menu-section" data-section="espresso">
+        <div class="sec-head">
+          <h2>Espresso &amp; Demleme Barı</h2>
+          <span>ÇİFT SHOT STANDART · %100 ARABICA</span>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item" data-name="Flat White" data-price="135">
+            <div class="item-info">
+              <div>
+                <div class="item-badges"><span class="badge badge-sig">İmza</span></div>
+                <div class="item-top"><h3 class="item-name">Flat White</h3></div>
+                <p class="item-desc">Çift shot Brezilya &amp; Kolombiya harmanı espresso ve ince dokulu mikro-köpük süt.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">135 ₺</span><span class="item-vol">200 ml</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=300&q=80" alt="Flat White" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="Cortado" data-price="125">
+            <div class="item-info">
+              <div>
+                <div class="item-top"><h3 class="item-name">Cortado</h3></div>
+                <p class="item-desc">Eşit oranda çift shot espresso ve ipeksi sıcak süt dengesi, cam bardakta servis.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">125 ₺</span><span class="item-vol">140 ml</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=300&q=80" alt="Cortado" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="V60 El Demlemesi" data-price="165">
+            <div class="item-info">
+              <div>
+                <div class="item-badges"><span class="badge badge-veg">Single Origin</span></div>
+                <div class="item-top"><h3 class="item-name">V60 El Demlemesi</h3></div>
+                <p class="item-desc">Etiyopya Guji veya Kosta Rika Tarrazu çekirdek seçimiyle siparişe özel taze demleme.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">165 ₺</span><span class="item-vol">260 ml</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=300&q=80" alt="V60" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="Cappuccino" data-price="130">
+            <div class="item-info">
+              <div>
+                <div class="item-top"><h3 class="item-name">Cappuccino</h3></div>
+                <p class="item-desc">Yoğun aromalı espresso üzerine kremamsı sıcak süt ve kadifemsi köpük katmanı.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">130 ₺</span><span class="item-vol">240 ml</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=300&q=80" alt="Cappuccino" loading="lazy">
+          </article>
+        </div>
+      </section>
+
+      <!-- Category 2: Cold Coffee -->
+      <section class="menu-section" data-section="soguk">
+        <div class="sec-head">
+          <h2>Soğuk Kahveler &amp; İmza İçecekler</h2>
+          <span>18 SAAT DEMLEME &amp; ARTİZAN ŞURUPLAR</span>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item" data-name="18 Saat Cold Brew" data-price="150">
+            <div class="item-info">
+              <div>
+                <div class="item-badges"><span class="badge badge-sig">En Çok Tercih Edilen</span></div>
+                <div class="item-top"><h3 class="item-name">18 Saat Cold Brew</h3></div>
+                <p class="item-desc">Kolombiya Huila çekirdeklerinin soğuk suda 18 saat yavaş demlenmesiyle elde edilen düşük asiditeli içim.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">150 ₺</span><span class="item-vol">300 ml</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=300&q=80" alt="Cold Brew" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="Iced Spanish Latte" data-price="155">
+            <div class="item-info">
+              <div>
+                <div class="item-top"><h3 class="item-name">Iced Spanish Latte</h3></div>
+                <p class="item-desc">Çift shot espresso, soğuk süt ve ev yapımı yoğunlaştırılmış süt dokunuşu.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">155 ₺</span><span class="item-vol">320 ml</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=300&q=80" alt="Iced Spanish Latte" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="Uji Matcha Iced Latte" data-price="165">
+            <div class="item-info">
+              <div>
+                <div class="item-badges"><span class="badge badge-veg">Yulaf Sütü İle Harika</span></div>
+                <div class="item-top"><h3 class="item-name">Uji Matcha Iced Latte</h3></div>
+                <p class="item-desc">Japonya Kyoto bölgesinden seremoni sınıfı saf matcha çayı ve soğuk süt.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">165 ₺</span><span class="item-vol">300 ml</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=300&q=80" alt="Matcha Latte" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="Biberiyeli & Kan Portakallı Espresso Tonic" data-price="160">
+            <div class="item-info">
+              <div>
+                <div class="item-top"><h3 class="item-name">Kan Portakallı Espresso Tonic</h3></div>
+                <p class="item-desc">Taze biberiye dalı, artizan tonik ve meyvemsi Etiyopya espresso shot birleşimi.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">160 ₺</span><span class="item-vol">300 ml</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=300&q=80" alt="Espresso Tonic" loading="lazy">
+          </article>
+        </div>
+      </section>
+
+      <!-- Category 3: Bakery & Pastry -->
+      <section class="menu-section" data-section="firin">
+        <div class="sec-head">
+          <h2>Ekşi Maya Fırın &amp; Günlük Tatlı</h2>
+          <span>HER SABAH 07:30'DA FIRINDAN TAZE</span>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item" data-name="Badem Ezmeli Tereyağlı Kruvasan" data-price="165">
+            <div class="item-info">
+              <div>
+                <div class="item-badges"><span class="badge badge-sig">Fırından Taze</span></div>
+                <div class="item-top"><h3 class="item-name">Badem Ezmeli Kruvasan</h3></div>
+                <p class="item-desc">Fransız tereyağlı çıtır katmanlar arasında kavrulmuş badem kreması (frangipane) ve file badem.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">165 ₺</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=300&q=80" alt="Kruvasan" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="San Sebastian Cheesecake" data-price="195">
+            <div class="item-info">
+              <div>
+                <div class="item-top"><h3 class="item-name">San Sebastian Cheesecake</h3></div>
+                <p class="item-desc">Karamele çalan yanık üst kabuk, akışkan krema dolgusu ve Belçika Callebaut bitter sos eşliğinde.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">195 ₺</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=300&q=80" alt="Cheesecake" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="Kakuleli İsveç Çöreği (Kardemummabullar)" data-price="140">
+            <div class="item-info">
+              <div>
+                <div class="item-top"><h3 class="item-name">Kakuleli İsveç Çöreği</h3></div>
+                <p class="item-desc">Taze çekilmiş yeşil kakule tohumu, tarçın ve esmer şekerle örülmüş yumuşak brioche hamuru.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">140 ₺</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=300&q=80" alt="Çörek" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="Tuzlu Karamelli & Cevizli Brownie" data-price="155">
+            <div class="item-info">
+              <div>
+                <div class="item-badges"><span class="badge badge-veg">Glütensiz Un</span></div>
+                <div class="item-top"><h3 class="item-name">Deniz Tuzlu &amp; Cevizli Brownie</h3></div>
+                <p class="item-desc">%70 bitter çikolata, kavrulmuş ceviz içi ve Maldon deniz tuzu kristalleri.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">155 ₺</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=300&q=80" alt="Brownie" loading="lazy">
+          </article>
+        </div>
+      </section>
+
+      <!-- Category 4: Breakfast & Bowls -->
+      <section class="menu-section" data-section="mutfak">
+        <div class="sec-head">
+          <h2>All-Day Kahvaltı &amp; Kaseler</h2>
+          <span>08:30 – 17:00 ARASI SERVİS EDİLİR</span>
+        </div>
+        <div class="menu-grid">
+          <article class="menu-item" data-name="Avokado & Poşe Yumurta Ekşi Maya Tost" data-price="245">
+            <div class="item-info">
+              <div>
+                <div class="item-badges"><span class="badge badge-sig">Mutfak Favorisi</span></div>
+                <div class="item-top"><h3 class="item-name">Avokado &amp; Poşe Yumurta Tost</h3></div>
+                <p class="item-desc">Izgara ekşi maya köy ekmeği üzerinde ezilmiş avokado, 2 adet gezen tavuk poşe yumurta ve çörekotu.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">245 ₺</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=300&q=80" alt="Avokado Tost" loading="lazy">
+          </article>
+
+          <article class="menu-item" data-name="Ev Yapımı Granola & Orman Meyveli Kase" data-price="210">
+            <div class="item-info">
+              <div>
+                <div class="item-badges"><span class="badge badge-veg">Şekersiz / Doğal Bal</span></div>
+                <div class="item-top"><h3 class="item-name">Ev Yapımı Granola Kasesi</h3></div>
+                <p class="item-desc">Süzme yoğurt, fırınlanmış bademli yulaf granola, taze yaban mersini, çilek ve çiçek balı.</p>
+              </div>
+              <div class="item-bottom">
+                <div><span class="item-price">210 ₺</span></div>
+                <button type="button" class="add-btn" aria-label="Listeye ekle">+</button>
+              </div>
+            </div>
+            <img class="item-thumb" src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=300&q=80" alt="Granola" loading="lazy">
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cafe-footer">
+      <div>
+        <strong>Alerjen Bilgilendirmesi:</strong> Ürünlerimizde süt ürünleri, yumurta, glüten ve sert kabuklu yemişler bulunmaktadır. Özel diyet tercihlerinizi baristamıza iletebilirsiniz.<br>
+        <span>Tüm fiyatlarımıza KDV dahildir. Servis ücreti alınmamaktadır.</span>
+      </div>
+      <div>
+        Altyapı &amp; Tasarım: <a href="https://salikoldas.me" style="text-decoration: underline; font-weight: 600; color: #1C1917;">Seyyid Ali Koldaş (salikoldas.me)</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Floating Table Selection Tray -->
+  <div class="tray-bar" id="tray-bar" aria-live="polite">
+    <div class="tray-summary">
+      <div class="tray-left">
+        <span class="tray-label">SEÇTİKLERİNİZ (<span id="tray-count">0</span> ÜRÜN)</span>
+        <span class="tray-total" id="tray-total">0 ₺</span>
+      </div>
+      <div class="tray-actions">
+        <button type="button" class="tray-clear" id="tray-clear">Temizle</button>
+        <button type="button" class="tray-btn" id="tray-toggle">Listeyi Gör / Garsona Göster</button>
+      </div>
+    </div>
+    <div class="tray-list" id="tray-list"></div>
+  </div>
+
+  <script>
+    // 1. One-tap Wi-Fi Copy
+    var wifiBtn = document.getElementById('wifi-btn');
+    var wifiText = document.getElementById('wifi-text');
+    wifiBtn.addEventListener('click', function () {
+      var pass = wifiBtn.getAttribute('data-pass');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(pass);
+      }
+      wifiText.innerHTML = 'Şifre Kopyalandı: <strong>roastery1923 ✓</strong>';
+      setTimeout(function () {
+        wifiText.innerHTML = 'Wi-Fi Şifresini Kopyala: <strong>roastery1923</strong>';
+      }, 2500);
+    });
+
+    // 2. Photo vs Compact List View Toggle
+    var btnPhoto = document.getElementById('btn-photo-view');
+    var btnCompact = document.getElementById('btn-compact-view');
+    btnPhoto.addEventListener('click', function () {
+      document.body.classList.remove('compact-mode');
+      btnPhoto.classList.add('active');
+      btnCompact.classList.remove('active');
+    });
+    btnCompact.addEventListener('click', function () {
+      document.body.classList.add('compact-mode');
+      btnCompact.classList.add('active');
+      btnPhoto.classList.remove('active');
+    });
+
+    // 3. Category Filter & Instant Search
+    var catBtns = document.querySelectorAll('.cat-btn');
+    var sections = document.querySelectorAll('.menu-section');
+    var searchInput = document.getElementById('menu-search');
+    var activeCat = 'all';
+
+    function filterMenu() {
+      var q = (searchInput.value || '').toLowerCase().trim();
+      sections.forEach(function (sec) {
+        var secCat = sec.getAttribute('data-section');
+        var catMatch = (activeCat === 'all' || activeCat === secCat);
+        var items = sec.querySelectorAll('.menu-item');
+        var visibleInSec = 0;
+
+        items.forEach(function (item) {
+          var text = item.textContent.toLowerCase();
+          var show = catMatch && (!q || text.indexOf(q) !== -1);
+          item.style.display = show ? '' : 'none';
+          if (show) visibleInSec++;
+        });
+
+        sec.style.display = visibleInSec > 0 ? '' : 'none';
+      });
+    }
+
+    catBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        catBtns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeCat = btn.getAttribute('data-cat');
+        filterMenu();
+      });
+    });
+
+    searchInput.addEventListener('input', filterMenu);
+
+    // 4. Table Selection Tray ("Masaya / Garsona Göster")
+    var tray = [];
+    var trayBar = document.getElementById('tray-bar');
+    var trayCount = document.getElementById('tray-count');
+    var trayTotal = document.getElementById('tray-total');
+    var trayList = document.getElementById('tray-list');
+    var trayToggle = document.getElementById('tray-toggle');
+    var trayClear = document.getElementById('tray-clear');
+
+    function renderTray() {
+      if (tray.length === 0) {
+        trayBar.classList.remove('visible', 'expanded');
+        return;
+      }
+      trayBar.classList.add('visible');
+      trayCount.textContent = tray.length;
+      var sum = tray.reduce(function (acc, it) { return acc + it.price; }, 0);
+      trayTotal.textContent = sum + ' ₺';
+
+      trayList.innerHTML = tray.map(function (it) {
+        return '<div class="tray-row"><span>1x ' + it.name + '</span><span style="font-family:var(--mono)">' + it.price + ' ₺</span></div>';
+      }).join('');
+    }
+
+    document.querySelectorAll('.menu-item').forEach(function (card) {
+      var btn = card.querySelector('.add-btn');
+      btn.addEventListener('click', function () {
+        var name = card.getAttribute('data-name');
+        var price = parseInt(card.getAttribute('data-price'), 10);
+        tray.push({ name: name, price: price });
+        btn.textContent = '✓';
+        setTimeout(function () { btn.textContent = '+'; }, 700);
+        renderTray();
+      });
+    });
+
+    trayToggle.addEventListener('click', function () {
+      trayBar.classList.toggle('expanded');
+      trayToggle.textContent = trayBar.classList.contains('expanded') ? 'Gizle' : 'Listeyi Gör / Garsona Göster';
+    });
+
+    trayClear.addEventListener('click', function () {
+      tray = [];
+      renderTray();
+    });
+  </script>
+</body>
+</html>
