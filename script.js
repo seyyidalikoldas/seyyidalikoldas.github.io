@@ -18,12 +18,12 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 30000);
 
-// Interactive Architecture Window Tabs
+// Interactive Business Type Tabs
 var tabs = document.querySelectorAll('.w-tab');
 var panes = {
-  web: document.getElementById('pane-web'),
-  auto: document.getElementById('pane-auto'),
-  it: document.getElementById('pane-it')
+  kafe: document.getElementById('pane-kafe'),
+  kurumsal: document.getElementById('pane-kurumsal'),
+  ofis: document.getElementById('pane-ofis')
 };
 
 tabs.forEach(function (btn) {
@@ -45,7 +45,7 @@ tabs.forEach(function (btn) {
 });
 
 // Selectable Topic Chips in Quote Form
-var selectedTopic = 'Kurumsal Web Sitesi / QR Menü';
+var selectedTopic = 'Kafe QR Menü / Web Sitesi';
 var chips = document.querySelectorAll('.topic-chip');
 chips.forEach(function (chip) {
   chip.addEventListener('click', function () {
@@ -86,7 +86,7 @@ if (form) {
       'Konu: ' + selectedTopic + '\n' +
       'Ad Soyad: ' + name + '\n' +
       'İşletme / İletişim: ' + company + '\n\n' +
-      'Detaylar:\n' + message + '\n'
+      'Notum:\n' + message + '\n'
     );
     window.location.href = 'mailto:info@salikoldas.me?subject=' + subject + '&body=' + body;
   });
