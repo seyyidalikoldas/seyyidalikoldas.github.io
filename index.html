@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seyyid Ali Koldaş — Web Mimarisi, Otomasyon & Kurumsal IT</title>
+  <meta name="description" content="Seyyid Ali Koldaş — Bilgisayar Mühendisi. İşletmeler için modern web siteleri, iş akışı otomasyonları ve kurumsal IT altyapı çözümleri.">
+  <meta name="theme-color" content="#09090b">
+  <meta property="og:title" content="Seyyid Ali Koldaş — Web, Otomasyon & IT Çözümleri">
+  <meta property="og:description" content="İşletmeler için hızlı web siteleri, süreç otomasyonları ve kurumsal IT sistemleri.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="frame-shell">
+    <!-- Top Telemetry Bar -->
+    <div class="topbar mono">
+      <div class="topbar-left">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Yeni proje ve danışmanlık için müsait</span>
+      </div>
+      <div class="topbar-right">
+        <span>TR / İSTANBUL</span>
+        <span class="sep">·</span>
+        <span id="local-time">--:--</span>
+        <span class="sep">·</span>
+        <a href="mailto:info@salikoldas.me">info@salikoldas.me</a>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="site-header">
+      <a href="#top" class="brand">
+        <span class="brand-name">Seyyid Ali Koldaş</span>
+        <span class="brand-role mono">Bilgisayar Mühendisi</span>
+      </a>
+      <nav class="site-nav" aria-label="Ana Menü">
+        <a href="#referanslar">Referanslar</a>
+        <a href="#cozumler">Çözümler</a>
+        <a href="#acik-kaynak">Mühendislik</a>
+        <a href="#surec">Çalışma Şekli</a>
+        <a href="#iletisim" class="nav-cta">Teklif Al</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="crosshair ch-tl" aria-hidden="true"></div>
+        <div class="crosshair ch-tr" aria-hidden="true"></div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow mono">WEB MİMARİSİ · OTOMASYON · KURUMSAL IT</div>
+            <h1>
+              İşletmenizin dijital yüzünü ve arka plandaki <span class="serif-italic">tüm teknik yükünü</span> inşa ediyorum.
+            </h1>
+            <p class="hero-desc">
+              Kafe, restoran ve yerel işletmelerden sanayi ve inşaat firmalarına kadar; müşterilerinizin ilk bakışta güven duyacağı hızlı web siteleri, tekrarlayan işleri bitiren otomasyonlar ve kesintisiz çalışan IT altyapıları kuruyorum.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#iletisim" class="btn-primary">
+                <span>Projenizi Konuşalım</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#referanslar" class="btn-secondary">Canlı Referansları İncele</a>
+            </div>
+
+            <div class="hero-proof">
+              <div class="proof-item">
+                <span class="proof-label mono">CANLI SİSTEMLER</span>
+                <span class="proof-val">mirdem.com · peraiskele.com · perakalip.com</span>
+              </div>
+              <div class="proof-item">
+                <span class="proof-label mono">AKTİF ROL</span>
+                <span class="proof-val">Pera İskele &amp; Kalıp Sistemleri — IT Uzmanı</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Architecture Preview Panel -->
+          <div class="hero-showcase" aria-label="Teknik çalışma önizlemesi">
+            <div class="showcase-window">
+              <div class="window-bar">
+                <div class="window-dots" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="window-tabs mono" role="tablist">
+                  <button type="button" class="w-tab active" data-tab="web" role="tab" aria-selected="true">01/Web</button>
+                  <button type="button" class="w-tab" data-tab="auto" role="tab" aria-selected="false">02/Otomasyon</button>
+                  <button type="button" class="w-tab" data-tab="it" role="tab" aria-selected="false">03/IT-Sistem</button>
+                </div>
+              </div>
+
+              <!-- Tab 1: Web & Digital Presence -->
+              <div class="window-pane active" id="pane-web">
+                <div class="pane-meta mono">
+                  <span>HEDEF: HIZ &amp; DÖNÜŞÜM</span>
+                  <span class="badge-ok">99/100 PERFORMANS</span>
+                </div>
+                <div class="arch-list">
+                  <div class="arch-row">
+                    <span class="arch-key mono">Kurumsal &amp; İşletme</span>
+                    <span class="arch-detail">Mobil öncelikli tasarım, QR menü, katalog ve hızlı teklif formları</span>
+                  </div>
+                  <div class="arch-row">
+                    <span class="arch-key mono">Arama Motoru (SEO)</span>
+                    <span class="arch-detail">Yapısal veri (Schema.org), Google Haritalar ve yerel arama optimizasyonu</span>
+                  </div>
+                  <div class="arch-row">
+                    <span class="arch-key mono">Altyapı &amp; Güvenlik</span>
+                    <span class="arch-detail">SSL, CDN önbellekleme, kesintisiz barındırma ve düzenli yedekleme</span>
+                  </div>
+                </div>
+                <div class="pane-footer mono">
+                  <span class="prompt-arrow">&gt;</span> Referans: <a href="https://mirdem.com" target="_blank" rel="noopener">mirdem.com ↗</a> · <a href="https://peraiskele.com" target="_blank" rel="noopener">peraiskele.com ↗</a>
+                </div>
+              </div>
+
+              <!-- Tab 2: Automation -->
+              <div class="window-pane" id="pane-auto">
+                <div class="pane-meta mono">
+                  <span>SEO-WORKFLOW-AUTOMATIONS</span>
+                  <span class="badge-ok">PYTHON 3.12</span>
+                </div>
+                <pre class="code-preview mono"><code><span class="c-dim"># Otomatik site denetimi ve yapısal veri üretimi</span>
+$ python run.py --target peraiskele.com --audit
+
+[✓] sitemap_audit.py     142 URL tarandı (0 kırık link)
+[✓] schema_builder.py    JSON-LD Organization &amp; Product hazır
+[✓] content_qa.py        Meta &amp; başlık hiyerarşisi doğrulandı
+[✓] gsc_export_helper.py Arama konsolu raporu dışa aktarıldı</code></pre>
+                <div class="pane-footer mono">
+                  <span class="prompt-arrow">&gt;</span> Kaynak kod: <a href="https://github.com/seyyidalikoldas/Seo-Workflow-Automations" target="_blank" rel="noopener">github.com/seyyidalikoldas ↗</a>
+                </div>
+              </div>
+
+              <!-- Tab 3: IT Infrastructure -->
+              <div class="window-pane" id="pane-it">
+                <div class="pane-meta mono">
+                  <span>PERA KURUMSAL IT MİMARİSİ</span>
+                  <span class="badge-ok">AKTİF SAHA SİSTEMİ</span>
+                </div>
+                <pre class="code-preview mono"><code><span class="c-dim"># Envanter, Yardım Masası ve Sunucu Otomasyonu</span>
+├─ Envanter   : Snipe-IT (Donanım, lisans ve zimmet takibi)
+├─ Destek     : Açık kaynak Helpdesk / Ticket iş akışı
+├─ Yedekleme  : backup_rotator.py (Otomatik rotasyon)
+└─ Güvenlik   : auth_log_watcher.py &amp; check_disk.sh</code></pre>
+                <div class="pane-footer mono">
+                  <span class="prompt-arrow">&gt;</span> Sıfır lisans maliyetiyle kurumsal iç sistem kurulumu
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 01: Selected Work / Case Studies -->
+      <section id="referanslar" class="section-block">
+        <div class="section-header">
+          <div>
+            <span class="section-index mono">01 / SAHA REFERANSLARI</span>
+            <h2>Gerçek işletmeler için çalışan sistemler.</h2>
+          </div>
+          <p class="section-lead">
+            Demo şablonlar değil; aktif olarak müşteri ağırlayan, teklif toplayan ve şirket içi operasyon yürüten canlı projeler.
+          </p>
+        </div>
+
+        <div class="case-list">
+          <!-- Case 1: Mirdem -->
+          <article class="case-row">
+            <div class="case-meta">
+              <span class="case-num mono">PROJE 01</span>
+              <h3 class="case-title">Mirdem Yapı İnşaat Taahhüt A.Ş.</h3>
+              <p class="case-tags mono">Sıfırdan Kurumsal Web · Mobil Uyum · SEO Altyapısı</p>
+              <p class="case-desc">
+                İnşaat, kentsel dönüşüm ve yapı güçlendirme alanında faaliyet gösteren Mirdem Yapı için kurumsal kimliği yansıtan, tüm cihazlarda hızlı açılan ve arama motorlarında doğrudan öne çıkan web sitesinin uçtan uca tasarımı ve yayına alınması.
+              </p>
+              <a href="https://mirdem.com" target="_blank" rel="noopener" class="case-link mono">
+                <span>mirdem.com adresini ziyaret et</span>
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+            <div class="case-visual">
+              <div class="browser-mock">
+                <div class="bm-top">
+                  <span class="bm-url mono">https://mirdem.com</span>
+                  <span class="bm-status mono">CANLI</span>
+                </div>
+                <div class="bm-body">
+                  <div class="bm-kicker mono">MİRDEM YAPI İNŞAAT TAAHHÜT A.Ş.</div>
+                  <div class="bm-headline">Güvenli ve Modern Yapılar İçin Mühendislik Çözümleri</div>
+                  <div class="bm-metrics mono">
+                    <div><span>KAPSAM</span><strong>Kurumsal Web &amp; SEO</strong></div>
+                    <div><span>TESLİMAT</span><strong>Uçtan Uca Kurulum</strong></div>
+                    <div><span>DURUM</span><strong>Aktif Yayında</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 2: Pera İskele & Pera Kalıp -->
+          <article class="case-row">
+            <div class="case-meta">
+              <span class="case-num mono">PROJE 02</span>
+              <h3 class="case-title">Pera İskele &amp; Pera Kalıp Sistemleri</h3>
+              <p class="case-tags mono">Web Bakım &amp; Güncelleme · SEO Otomasyonu · İçerik Mimarisi</p>
+              <p class="case-desc">
+                Sektörün önde gelen iskele ve kalıp üreticilerinden Pera'nın iki ayrı kurumsal web sitesinin düzenli bakımı, teknik iyileştirmeleri, ürün/sayfa güncellemeleri ve Python tabanlı özel otomasyon araçlarıyla SEO denetim süreçlerinin yürütülmesi.
+              </p>
+              <div class="case-links-dual">
+                <a href="https://peraiskele.com" target="_blank" rel="noopener" class="case-link mono">
+                  <span>peraiskele.com</span>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="https://perakalip.com" target="_blank" rel="noopener" class="case-link mono">
+                  <span>perakalip.com</span>
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4V10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="case-visual">
+              <div class="browser-mock">
+                <div class="bm-top">
+                  <span class="bm-url mono">peraiskele.com &amp; perakalip.com</span>
+                  <span class="bm-status mono">SÜREKLİ YÖNETİM</span>
+                </div>
+                <div class="bm-body">
+                  <div class="bm-kicker mono">PERA İSKELE VE KALIP SİSTEMLERİ</div>
+                  <div class="bm-headline">İki Kurumsal Platformda Sürekli Güncelleme ve Teknik Otomasyon</div>
+                  <div class="bm-metrics mono">
+                    <div><span>SİTELER</span><strong>2 Kurumsal Platform</strong></div>
+                    <div><span>OTOMASYON</span><strong>Sitemap &amp; Schema QA</strong></div>
+                    <div><span>SÜREÇ</span><strong>Düzenli Bakım</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case 3: Pera IT -->
+          <article class="case-row">
+            <div class="case-meta">
+              <span class="case-num mono">PROJE 03</span>
+              <h3 class="case-title">Pera Kurumsal IT Envanter &amp; Destek Sistemi</h3>
+              <p class="case-tags mono">Snipe-IT · Açık Kaynak Ticket Sistemi · Sistem Yöneticiliği</p>
+              <p class="case-desc">
+                Şirket içindeki tüm bilgisayar, donanım ve yazılım lisanslarının kayıt altına alındığı Snipe-IT tabanlı envanter sistemi ile personelin teknik taleplerini tek merkezden yöneten açık kaynak destek (ticket) platformunun kurulumu ve yönetimi.
+              </p>
+              <span class="case-internal mono">Şirket İçi Kapalı Devre Sistem — Aktif Kullanımda</span>
+            </div>
+            <div class="case-visual">
+              <div class="browser-mock">
+                <div class="bm-top">
+                  <span class="bm-url mono">internal.pera / snipe-it &amp; helpdesk</span>
+                  <span class="bm-status mono">DAHİLİ ALTYAPI</span>
+                </div>
+                <div class="bm-body">
+                  <div class="bm-kicker mono">KURUMSAL IT OPERASYONU</div>
+                  <div class="bm-headline">Kağıtsız, Kayıtlı ve İzlenebilir Donanım &amp; Destek Yönetimi</div>
+                  <div class="bm-metrics mono">
+                    <div><span>ENVANTER</span><strong>Snipe-IT Varlık Takibi</strong></div>
+                    <div><span>DESTEK</span><strong>Merkezi Ticket Akışı</strong></div>
+                    <div><span>MALİYET</span><strong>Açık Kaynak / Lisanssız</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 02: Solutions for Businesses -->
+      <section id="cozumler" class="section-block">
+        <div class="section-header">
+          <div>
+            <span class="section-index mono">02 / HİZMET ALANLARI</span>
+            <h2>İşletmeniz için neler yapabilirim?</h2>
+          </div>
+          <p class="section-lead">
+            İster yeni açılan bir kafe veya yerel işletme olun, ister büyüyen bir üretim firması; ihtiyacınıza göre tek seferlik kurulum veya düzenli teknik ortaklık sunuyorum.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          <article class="bento-cell">
+            <div class="cell-top">
+              <span class="cell-num mono">01</span>
+              <svg class="cell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="16" rx="2"/>
+                <path d="M3 9H21M7 6.5H7.01M10 6.5H10.01"/>
+              </svg>
+            </div>
+            <h3>Web Sitesi &amp; Dijital Menü (QR)</h3>
+            <p>
+              Kafe, restoran, klinik, mağaza ve kurumsal firmalar için telefonda anında açılan, şık ve anlaşılır web siteleri. Kafeler için komisyonsuz, kolay güncellenebilir QR dijital menü ve Google Haritalar kaydı.
+            </p>
+            <ul class="cell-points mono">
+              <li>Mobil öncelikli özel tasarım</li>
+              <li>QR Menü &amp; Ürün Kataloğu</li>
+              <li>Google İşletme &amp; Harita kurulumu</li>
+            </ul>
+          </article>
+
+          <article class="bento-cell">
+            <div class="cell-top">
+              <span class="cell-num mono">02</span>
+              <svg class="cell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M4 7H20M4 12H14M4 17H11"/>
+                <circle cx="18" cy="15" r="3"/>
+                <path d="M20.5 17.5L22 19"/>
+              </svg>
+            </div>
+            <h3>İş Akışı &amp; Süreç Otomasyonu</h3>
+            <p>
+              Her gün saatlerinizi alan Excel tabloları, fiyat/stok kontrolleri, raporlamalar, otomatik bildirimler ve SEO denetimlerini Python tabanlı özel yazılımlarla kendi kendine çalışır hale getiriyorum.
+            </p>
+            <ul class="cell-points mono">
+              <li>Otomatik raporlama ve veri çekme</li>
+              <li>Telegram / Discord / E-posta botları</li>
+              <li>Teknik SEO ve içerik kontrol botları</li>
+            </ul>
+          </article>
+
+          <article class="bento-cell">
+            <div class="cell-top">
+              <span class="cell-num mono">03</span>
+              <svg class="cell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M12 3L4 7V12C4 16.5 7.5 20.5 12 21.5C16.5 20.5 20 16.5 20 12V7L12 3Z"/>
+                <path d="M9 12L11 14L15 10"/>
+              </svg>
+            </div>
+            <h3>Kurumsal IT, Envanter &amp; Ticket</h3>
+            <p>
+              Şirketinizdeki bilgisayarların kimde olduğunu takip eden envanter sistemi (Snipe-IT) ve çalışanların arızaları bildirdiği yardım masası (Ticket) sistemini aylık lisans ücreti ödemeden kendi sunucunuza kuruyorum.
+            </p>
+            <ul class="cell-points mono">
+              <li>Snipe-IT donanım ve zimmet takibi</li>
+              <li>Açık kaynak Helpdesk / Ticket kurulumu</li>
+              <li>Ağ, yedekleme ve sunucu güvenliği</li>
+            </ul>
+          </article>
+
+          <article class="bento-cell">
+            <div class="cell-top">
+              <span class="cell-num mono">04</span>
+              <svg class="cell-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+            </div>
+            <h3>Site Bakımı, Hızlandırma &amp; Yenileme</h3>
+            <p>
+              Mevcut bir web siteniz var ama yavaş açılıyor, mobilde kayıyor veya kimse ilgilenmiyor mu? Sitenizi elden geçiriyor, hatalarını gideriyor ve düzenli güncellemelerini üstleniyorum.
+            </p>
+            <ul class="cell-points mono">
+              <li>Mevcut siteleri modernleştirme</li>
+              <li>SSL, güvenlik ve hız optimizasyonu</li>
+              <li>Düzenli içerik ve ürün güncelleme</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section 03: Engineering & Open Source -->
+      <section id="acik-kaynak" class="section-block">
+        <div class="section-header">
+          <div>
+            <span class="section-index mono">03 / MÜHENDİSLİK &amp; AÇIK KAYNAK</span>
+            <h2>Kod mutfağı ve geliştirdiğim araçlar.</h2>
+          </div>
+          <p class="section-lead">
+            Hazır paketlerin yetmediği yerde kendi araçlarımı yazıyorum. GitHub üzerindeki açık kaynak sistem yönetimi, SEO otomasyonu ve veri analizi projelerim:
+          </p>
+        </div>
+
+        <div class="repo-table">
+          <a href="https://github.com/seyyidalikoldas/Sysadmin-ToolBox" target="_blank" rel="noopener" class="repo-row">
+            <div class="repo-main">
+              <span class="repo-name mono">Sysadmin-ToolBox</span>
+              <span class="repo-desc">Sistem yöneticileri için log izleme, yedekleme rotasyonu ve disk/kullanıcı denetim araçları.</span>
+            </div>
+            <div class="repo-files mono">
+              <span>auth_log_watcher.py</span>
+              <span>backup_rotator.py</span>
+              <span>check_disk.sh</span>
+            </div>
+            <span class="repo-lang mono">Python / Shell ↗</span>
+          </a>
+
+          <a href="https://github.com/seyyidalikoldas/Seo-Workflow-Automations" target="_blank" rel="noopener" class="repo-row">
+            <div class="repo-main">
+              <span class="repo-name mono">Seo-Workflow-Automations</span>
+              <span class="repo-desc">Site haritası denetimi, içerik kalite kontrolü, JSON-LD şema üretici ve Search Console yardımcıları.</span>
+            </div>
+            <div class="repo-files mono">
+              <span>sitemap_audit.py</span>
+              <span>schema_builder.py</span>
+              <span>content_qa.py</span>
+            </div>
+            <span class="repo-lang mono">Python ↗</span>
+          </a>
+
+          <a href="https://github.com/seyyidalikoldas/Marketplace-Risk-Engine" target="_blank" rel="noopener" class="repo-row">
+            <div class="repo-main">
+              <span class="repo-name mono">Marketplace-Risk-Engine</span>
+              <span class="repo-desc">Kural tabanlı pazaryeri risk skorlama ve SQL destekli işlem doğrulama motoru.</span>
+            </div>
+            <div class="repo-files mono">
+              <span>evaluator.py</span>
+              <span>checks/</span>
+              <span>sql/</span>
+            </div>
+            <span class="repo-lang mono">Python / SQL ↗</span>
+          </a>
+        </div>
+
+        <div class="repo-footer">
+          <a href="https://github.com/seyyidalikoldas" target="_blank" rel="noopener" class="mono link-underline">
+            GitHub profilimde tüm çalışmaları incele (github.com/seyyidalikoldas) ↗
+          </a>
+        </div>
+      </section>
+
+      <!-- Section 04: Process & About -->
+      <section id="surec" class="section-block">
+        <div class="split-2">
+          <div>
+            <span class="section-index mono">04 / ÇALIŞMA ŞEKLİ</span>
+            <h2>Karmaşık teknik terimler yok, net sonuç var.</h2>
+            <p class="about-text">
+              Ben <strong>Seyyid Ali Koldaş</strong>. Bilgisayar mühendisiyim. Şu anda <strong>Pera İskele ve Kalıp Sistemleri</strong> bünyesinde IT Uzmanı olarak kurumsal sistemleri yönetiyor; aynı zamanda işletmelere web geliştirme, dijitalleşme ve otomasyon desteği veriyorum.
+            </p>
+            <p class="about-text">
+              Ajansların haftalarca süren bürokrasisi ve şişirilmiş fiyatları yerine, doğrudan işi yapan mühendisle muhatap olursunuz. İhtiyacınız olmayan hiçbir özelliği size satmam; işinize doğrudan fayda sağlayacak sistemi kurar ve teslim ederim.
+            </p>
+          </div>
+
+          <div class="process-steps">
+            <div class="step-item">
+              <span class="step-no mono">ADIM 01</span>
+              <div>
+                <h3>Kısa Tanışma &amp; İhtiyaç Analizi</h3>
+                <p>İşletmenizi ziyaret eder veya online görüşürüz. Neye ihtiyacınız olduğunu birlikte netleştiririz.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-no mono">ADIM 02</span>
+              <div>
+                <h3>Net Kapsam &amp; Teklif</h3>
+                <p>Ne yapılacağını, ne zaman teslim edileceğini ve bütçeyi tek sayfalık anlaşılır bir planla sunarım.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-no mono">ADIM 03</span>
+              <div>
+                <h3>Geliştirme, Test &amp; Yayına Alma</h3>
+                <p>Sitenizi veya sisteminizi kurar, mobil ve hız testlerini tamamlar, kendi alan adınızla yayına alırım.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <span class="step-no mono">ADIM 04</span>
+              <div>
+                <h3>Teslim Sonrası Destek</h3>
+                <p>İşi teslim edip kaybolmam. Güncelleme, yedekleme ve yeni ihtiyaçlarınızda doğrudan bana ulaşırsınız.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 05: Contact -->
+      <section id="iletisim" class="section-block contact-section">
+        <div class="crosshair ch-bl" aria-hidden="true"></div>
+        <div class="crosshair ch-br" aria-hidden="true"></div>
+
+        <div class="contact-grid">
+          <div class="contact-left">
+            <span class="section-index mono">05 / İLETİŞİM &amp; TEKLİF</span>
+            <h2>İşletmeniz için neler yapabileceğimizi konuşalım.</h2>
+            <p class="contact-desc">
+              Yeni bir web sitesi, QR menü, mevcut sitenizin yenilenmesi veya şirket içi otomasyon/IT kurulumu için bana doğrudan e-posta gönderebilirsiniz. Genellikle aynı gün içinde dönüş yapıyorum.
+            </p>
+
+            <div class="direct-mail-box">
+              <span class="dm-label mono">DOĞRUDAN E-POSTA</span>
+              <div class="dm-row">
+                <a href="mailto:info@salikoldas.me" class="dm-address mono">info@salikoldas.me</a>
+                <button type="button" id="copy-mail-btn" class="copy-btn mono" data-email="info@salikoldas.me">
+                  Kopyala
+                </button>
+              </div>
+            </div>
+
+            <div class="social-links mono">
+              <a href="https://github.com/seyyidalikoldas" target="_blank" rel="noopener">GitHub ↗</a>
+              <span>·</span>
+              <a href="https://salikoldas.dev">salikoldas.dev</a>
+              <span>·</span>
+              <a href="https://salikoldas.me">salikoldas.me</a>
+            </div>
+          </div>
+
+          <div class="contact-right">
+            <form id="quote-form" class="quote-form">
+              <div class="form-group">
+                <span class="form-label mono">İLGİLENDİĞİNİZ KONU (SEÇEBİLİRSİNİZ)</span>
+                <div class="topic-chips" id="topic-chips">
+                  <button type="button" class="topic-chip active" data-val="Kurumsal Web Sitesi / QR Menü">Web Sitesi / QR Menü</button>
+                  <button type="button" class="topic-chip" data-val="Bakım & Site Yenileme">Bakım &amp; Yenileme</button>
+                  <button type="button" class="topic-chip" data-val="Süreç & SEO Otomasyonu">Otomasyon</button>
+                  <button type="button" class="topic-chip" data-val="IT Altyapı / Envanter / Ticket">IT &amp; Envanter</button>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <label class="form-group">
+                  <span class="form-label mono">ADINIZ SOYADINIZ</span>
+                  <input type="text" name="name" required placeholder="Örn. Ahmet Yılmaz" autocomplete="name">
+                </label>
+                <label class="form-group">
+                  <span class="form-label mono">İŞLETME ADI VEYA TELEFON</span>
+                  <input type="text" name="company" required placeholder="Örn. Moda Kafe / 05xx...">
+                </label>
+              </div>
+
+              <label class="form-group">
+                <span class="form-label mono">KISACA İHTİYACINIZ</span>
+                <textarea name="message" rows="4" required placeholder="İşletmenizden ve yaptırmak istediğiniz çalışmadan kısaca bahsedin..."></textarea>
+              </label>
+
+              <button type="submit" class="btn-primary btn-full">
+                <span>E-posta İle Teklif Talebi Gönder</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <p class="form-footnote mono">
+                Gönder butonuna tıkladığınızda mesajınız hazır olarak e-posta uygulamanızda açılır.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer mono">
+      <span>© <span id="year"></span> Seyyid Ali Koldaş</span>
+      <span>Bilgisayar Mühendisi — İstanbul</span>
+      <span>salikoldas.dev · salikoldas.me</span>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
