@@ -56,12 +56,15 @@
 
         <div class="hero-grid">
           <div class="hero-copy">
-            <div class="eyebrow mono">WEB MİMARİSİ · OTOMASYON · KURUMSAL IT</div>
+            <div class="eyebrow mono">
+              <span class="eyebrow-pill">MÜHENDİSLİK &amp; DİJİTAL ÇÖZÜMLER</span>
+            </div>
             <h1>
-              İşletmenizin dijital yüzünü ve arka plandaki <span class="text-highlight">tüm teknik yükünü</span> inşa ediyorum.
+              İşletmenizin dijital yüzünü kuruyor,
+              <span class="h1-muted">arka plandaki tüm teknik yükünü üstleniyorum.</span>
             </h1>
             <p class="hero-desc">
-              Kafe, restoran ve yerel işletmelerden sanayi ve inşaat firmalarına kadar; müşterilerinizin ilk bakışta güven duyacağı hızlı web siteleri, tekrarlayan işleri bitiren otomasyonlar ve kesintisiz çalışan IT altyapıları kuruyorum.
+              Kafe, restoran ve yerel işletmelerden sanayi ve inşaat firmalarına kadar; müşterilerinizin ilk bakışta güven duyacağı hızlı web siteleri, tekrarlayan işleri bitiren otomasyonlar ve kesintisiz çalışan IT altyapıları inşa ediyorum.
             </p>
 
             <div class="hero-actions">
@@ -100,62 +103,80 @@
                 </div>
               </div>
 
-              <!-- Tab 1: Web & Digital Presence -->
-              <div class="window-pane active" id="pane-web">
-                <div class="pane-meta mono">
-                  <span>HEDEF: HIZ &amp; DÖNÜŞÜM</span>
-                  <span class="badge-ok">99/100 PERFORMANS</span>
-                </div>
-                <div class="arch-list">
-                  <div class="arch-row">
-                    <span class="arch-key mono">Kurumsal &amp; İşletme</span>
-                    <span class="arch-detail">Mobil öncelikli tasarım, QR menü, katalog ve hızlı teklif formları</span>
+              <div class="window-panes-stack">
+                <!-- Tab 1: Web & Digital Presence -->
+                <div class="window-pane active" id="pane-web">
+                  <div class="pane-meta mono">
+                    <span>HEDEF: HIZ &amp; DÖNÜŞÜM</span>
+                    <span class="badge-ok">99/100 PERFORMANS</span>
                   </div>
-                  <div class="arch-row">
-                    <span class="arch-key mono">Arama Motoru (SEO)</span>
-                    <span class="arch-detail">Yapısal veri (Schema.org), Google Haritalar ve yerel arama optimizasyonu</span>
+                  <div class="arch-list">
+                    <div class="arch-row">
+                      <span class="arch-key mono">Kurumsal Web &amp; QR Menü</span>
+                      <span class="arch-detail">Mobil öncelikli tasarım, komisyonsuz dijital menü ve hızlı teklif formları</span>
+                    </div>
+                    <div class="arch-row">
+                      <span class="arch-key mono">Arama Motoru (SEO)</span>
+                      <span class="arch-detail">Yapısal veri (Schema.org), Google Haritalar ve yerel arama optimizasyonu</span>
+                    </div>
+                    <div class="arch-row">
+                      <span class="arch-key mono">Altyapı &amp; Güvenlik</span>
+                      <span class="arch-detail">Cloudflare CDN, SSL, kesintisiz barındırma ve otomatik yedekleme</span>
+                    </div>
                   </div>
-                  <div class="arch-row">
-                    <span class="arch-key mono">Altyapı &amp; Güvenlik</span>
-                    <span class="arch-detail">SSL, CDN önbellekleme, kesintisiz barındırma ve düzenli yedekleme</span>
+                  <div class="pane-footer mono">
+                    <span class="prompt-arrow">&gt;</span> Canlı: <a href="https://mirdem.com" target="_blank" rel="noopener">mirdem.com ↗</a> · <a href="/demo-kafe/">Kafe QR Demo ↗</a>
                   </div>
                 </div>
-                <div class="pane-footer mono">
-                  <span class="prompt-arrow">&gt;</span> Referans: <a href="https://mirdem.com" target="_blank" rel="noopener">mirdem.com ↗</a> · <a href="/demo-kafe/">Kafe QR Demo ↗</a>
-                </div>
-              </div>
 
-              <!-- Tab 2: Automation -->
-              <div class="window-pane" id="pane-auto">
-                <div class="pane-meta mono">
-                  <span>SEO-WORKFLOW-AUTOMATIONS</span>
-                  <span class="badge-ok">PYTHON 3.12</span>
+                <!-- Tab 2: Automation -->
+                <div class="window-pane" id="pane-auto">
+                  <div class="pane-meta mono">
+                    <span>SEO &amp; İŞ AKIŞI OTOMASYONU</span>
+                    <span class="badge-ok">PYTHON 3.12</span>
+                  </div>
+                  <div class="arch-list">
+                    <div class="arch-row">
+                      <span class="arch-key mono">sitemap_audit.py &amp; content_qa.py</span>
+                      <span class="arch-detail">Yüzlerce sayfalık kurumsal sitelerde kırık link, başlık ve meta denetimi</span>
+                    </div>
+                    <div class="arch-row">
+                      <span class="arch-key mono">schema_builder.py &amp; GSC</span>
+                      <span class="arch-detail">Otomatik JSON-LD yapısal veri üretimi ve Search Console rapor aktarımı</span>
+                    </div>
+                    <div class="arch-row">
+                      <span class="arch-key mono">Özel Bot &amp; Veri Entegrasyonu</span>
+                      <span class="arch-detail">Tekrarlayan Excel, stok/fiyat kontrolü ve bildirim süreçlerinin otomasyonu</span>
+                    </div>
+                  </div>
+                  <div class="pane-footer mono">
+                    <span class="prompt-arrow">&gt;</span> Kaynak kod: <a href="https://github.com/seyyidalikoldas/Seo-Workflow-Automations" target="_blank" rel="noopener">Seo-Workflow-Automations ↗</a>
+                  </div>
                 </div>
-                <pre class="code-preview mono"><code><span class="c-dim"># Otomatik site denetimi ve yapısal veri üretimi</span>
-$ python run.py --target peraiskele.com --audit
 
-[✓] sitemap_audit.py     142 URL tarandı (0 kırık link)
-[✓] schema_builder.py    JSON-LD Organization &amp; Product hazır
-[✓] content_qa.py        Meta &amp; başlık hiyerarşisi doğrulandı
-[✓] gsc_export_helper.py Arama konsolu raporu dışa aktarıldı</code></pre>
-                <div class="pane-footer mono">
-                  <span class="prompt-arrow">&gt;</span> Kaynak kod: <a href="https://github.com/seyyidalikoldas/Seo-Workflow-Automations" target="_blank" rel="noopener">github.com/seyyidalikoldas ↗</a>
-                </div>
-              </div>
-
-              <!-- Tab 3: IT Infrastructure -->
-              <div class="window-pane" id="pane-it">
-                <div class="pane-meta mono">
-                  <span>PERA KURUMSAL IT MİMARİSİ</span>
-                  <span class="badge-ok">AKTİF SAHA SİSTEMİ</span>
-                </div>
-                <pre class="code-preview mono"><code><span class="c-dim"># Envanter, Yardım Masası ve Sunucu Otomasyonu</span>
-├─ Envanter   : Snipe-IT (Donanım, lisans ve zimmet takibi)
-├─ Destek     : Açık kaynak Helpdesk / Ticket iş akışı
-├─ Yedekleme  : backup_rotator.py (Otomatik rotasyon)
-└─ Güvenlik   : auth_log_watcher.py &amp; check_disk.sh</code></pre>
-                <div class="pane-footer mono">
-                  <span class="prompt-arrow">&gt;</span> Sıfır lisans maliyetiyle kurumsal iç sistem kurulumu
+                <!-- Tab 3: IT Infrastructure -->
+                <div class="window-pane" id="pane-it">
+                  <div class="pane-meta mono">
+                    <span>PERA KURUMSAL IT MİMARİSİ</span>
+                    <span class="badge-ok">AKTİF SAHA SİSTEMİ</span>
+                  </div>
+                  <div class="arch-list">
+                    <div class="arch-row">
+                      <span class="arch-key mono">Snipe-IT Donanım Envanteri</span>
+                      <span class="arch-detail">Tüm şirket bilgisayar, lisans ve personel zimmetlerinin merkezi takibi</span>
+                    </div>
+                    <div class="arch-row">
+                      <span class="arch-key mono">Yardım Masası (Ticket Sistemi)</span>
+                      <span class="arch-detail">Açık kaynak altyapıyla kurulan, lisans maliyetsiz teknik destek iş akışı</span>
+                    </div>
+                    <div class="arch-row">
+                      <span class="arch-key mono">Sunucu &amp; Log Otomasyonu</span>
+                      <span class="arch-detail">backup_rotator.py ve auth_log_watcher.py ile otomatik yedek ve güvenlik</span>
+                    </div>
+                  </div>
+                  <div class="pane-footer mono">
+                    <span class="prompt-arrow">&gt;</span> Araç seti: <a href="https://github.com/seyyidalikoldas/Sysadmin-ToolBox" target="_blank" rel="noopener">Sysadmin-ToolBox ↗</a>
+                  </div>
                 </div>
               </div>
             </div>

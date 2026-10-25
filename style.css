@@ -203,24 +203,39 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.12fr 0.88fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
 
 .eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  color: var(--accent);
   margin-bottom: 20px;
 }
 
+.eyebrow-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid rgba(249, 115, 22, 0.28);
+  padding: 5px 11px;
+  border-radius: 99px;
+}
+
 h1 {
-  font-size: clamp(2.1rem, 4vw, 3.35rem);
-  line-height: 1.12;
+  font-size: clamp(2rem, 3.15vw, 2.75rem);
+  line-height: 1.18;
   font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 24px;
+  letter-spacing: -0.035em;
+  margin-bottom: 22px;
+  color: #ffffff;
+  text-wrap: balance;
+}
+
+.h1-muted {
+  color: #8f8f9d;
+  font-weight: 600;
 }
 
 .hero-desc {
@@ -362,13 +377,24 @@ h1 {
   border-color: var(--border-strong);
 }
 
+.window-panes-stack {
+  display: grid;
+  grid-template-areas: "pane";
+}
+
 .window-pane {
-  display: none;
+  grid-area: pane;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   padding: 20px;
+  transition: opacity 0.16s ease;
 }
 
 .window-pane.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .pane-meta {
